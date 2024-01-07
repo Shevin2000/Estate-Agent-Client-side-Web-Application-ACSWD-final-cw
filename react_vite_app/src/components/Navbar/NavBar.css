@@ -1,0 +1,37 @@
+/* NavBar.css */
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Rubik+Maps&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif; 
+}
+
+.custom-navbar {
+  background-color: #24c693;
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 2px;
+}
+
+.navbar-nav .nav-link:hover {
+  font-size: 18px;
+  color: #ffffff; 
+  border-bottom: 2px solid #ffffff; 
+  padding-bottom: 0;
+}
+.navbar-nav .nav-link.active {
+  font-size: 18px; 
+  border-bottom: 2px solid #ffffff; 
+  color: #ffffff !important; 
+  padding-bottom: 0;
+}

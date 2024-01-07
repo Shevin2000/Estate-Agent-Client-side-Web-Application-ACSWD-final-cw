@@ -1,0 +1,11 @@
+/* PropertyCard.css */
+.card {
+    transition: transform 0.3s;
+    font-family: 'Raleway', sans-serif;
+    
+  }
+  
+  .card:hover {
+    transform: scale(1.02); /* Increase the scale for a slight zoom effect on hover */
+  }
+  

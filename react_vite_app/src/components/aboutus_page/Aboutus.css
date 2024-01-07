@@ -1,0 +1,78 @@
+.section-content {
+  text-align: justify;
+  color: #24c693;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/* Styling for the image in the first row */
+.row img {
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Styling for the cards in the second row */
+.card {
+  background-color: #d1c4e9;
+}
+
+/* Styling for the mission heading and paragraph in the third row */
+.mission-heading {
+  margin-bottom: 3rem;
+}
+
+/* Styling for the badges */
+.badge {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  /* Adjust the font size as needed */
+}
+
+/* Styling for the badges with different colors */
+.bg-info-badge {
+  background-color: #17a2b8;
+}
+
+.bg-primary-badge {
+  background-color: #007bff;
+}
+
+/* TeamCard.css */
+.team-card {
+  background-color: #d1c4e9;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+  background-color:
+    /* your hover color */
+  ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Add a box shadow for the hover effect */
+}
+
+.team-card-title {
+  font-family: 'Georgia, serif';
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #20247b;
+}
+
+.team-card-text {
+  font-family: 'Georgia, serif';
+  font-size: 1rem;
+  color: #20247b;
+  line-height: 1.6;
+}
+
+.team-card-img {
+  transition: transform 0.2s;
+}
+
+.team-card:hover .team-card-img {
+  transform: scale(1.02);
+}

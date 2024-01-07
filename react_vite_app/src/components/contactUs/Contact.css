@@ -1,0 +1,46 @@
+/* Add this CSS to your stylesheet or in the style tag of your React component */
+
+/* Style for the Contact Form Heading */
+h2.text-center {
+  font-size: 2em;
+  margin: 0;
+  padding: 20px;
+  color: #fc5356;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Style for the Form Container */
+form.container {
+  max-width: 500px;
+  /* Adjust the maximum width based on your design */
+  margin: auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Style for Form Elements and Labels */
+.form-label {
+  font-weight: bold;
+  color: #20247b;
+  border-radius: 1px;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+/* Style for the DropdownList and DatePicker */
+.rw-widget-container {
+  width: 100%;
+}
+
+/* Style for the Submit Button */
+.btn-primary {
+  background-color: #fc5356;
+  border-color: #fc5356;
+}
+
+.btn-primary:hover {
+  background-color: #20247b;
+  border-color: #20247b;
+  color: #fff;
+}
