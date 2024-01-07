@@ -82,7 +82,7 @@ const ContactForm = () => {
           <div className="col-lg-6 mt-3">
             <img
               className="w-100"
-              src="/src/assets/home/serchg.png"
+              src="/src/assets/home/conn.png"
               alt="Search"
               style={{ maxHeight: "380px" }}
             />
