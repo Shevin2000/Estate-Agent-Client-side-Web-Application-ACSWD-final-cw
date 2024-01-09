@@ -135,18 +135,19 @@ const ContactForm = () => {
 
         <div className="mb-3">
           <label htmlFor="color" className="form-label">
-            Select Color
+            Preferred Property Type
           </label>
           <DropdownList
-            defaultValue="Yellow"
-            data={["Red", "Yellow", "Blue", "Orange"]}
+            defaultValue="Residential"
+            data={["Residential", "Commercial", "Land"]}
             className="form-control"
+            id="propertyType"
           />
         </div>
 
         <div className="mb-3">
           <label htmlFor="date" className="form-label">
-            Select Date
+            Preferred Viewing Date
           </label>
           <DatePicker placeholder="m/dd/yy" className="form-control" />
         </div>
