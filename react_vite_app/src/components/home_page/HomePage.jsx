@@ -18,10 +18,6 @@ const HomePage = () => {
     setProperties(data.properties);
   }, []);
 
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
   let navigate = useNavigate();
   const handleClick = (e) => {
     navigate("/Properties/" + e, { state: { id: e, name: "just name" } });
@@ -30,9 +26,16 @@ const HomePage = () => {
   // console.log(properties[0]);
 
   return (
+    
     <div>
-      <Carousel className="mt-4 pt-2">
-        <Carousel.Item className="pt-4">
+ <div className="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center mt-5 pt-2 pb-0 mb-0" style={{ backgroundColor: '#20247b', color: 'white' }}>
+      <div className="container">
+        <h1 className="display-4" style={{color: 'white', fontSize:"2rem", fontWeight:"normal"}}>Welcome to SHEVIN HOMES !!!</h1>
+        <p className="lead pb-3 mb-0" style={{color: 'white', fontSize:"1rem", fontWeight:"normal"}} >We are your trusted estate selling agents, committed to helping you find your dream home. Explore our wide range of properties and let us guide you through the journey of making your next home a reality.</p>
+      </div>
+    </div>
+      <Carousel className="pt-0 mt-0">
+        <Carousel.Item className="">
           <img
             className="d-block w-100"
             src="/src/components/CarouselImage/home1Ca.jpg"
@@ -44,7 +47,7 @@ const HomePage = () => {
             <p className="para">Stylish homes for contemporary lifestyles.</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className="pt-4">
+        <Carousel.Item className="pt-0">
           <img
             className="d-block w-100"
             src="/src/components/CarouselImage/home2Ca.jpg"
@@ -59,7 +62,7 @@ const HomePage = () => {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className="pt-4">
+        <Carousel.Item className="pt-0">
           <img
             className="d-block w-100"
             src="/src/components/CarouselImage/home3Ca.jpg"

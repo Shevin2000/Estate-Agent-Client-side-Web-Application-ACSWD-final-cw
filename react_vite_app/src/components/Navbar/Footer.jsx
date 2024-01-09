@@ -19,7 +19,9 @@ const Footer = () => {
           </a>
         </div>
         <p>
-          Shevin Mitipolaarachchi | 2nd Year CS Student | University of Westminster | Advanced Client Side Web Development
+          Shevin Mitipolaarachchi | University of Westminster | School of Electronics and Computer Science
+ | 5COSC026W Advanced Client-Side Web Development
+
         </p>
       </div>
     </footer>

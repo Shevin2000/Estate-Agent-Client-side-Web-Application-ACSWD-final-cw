@@ -1,16 +1,15 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import { FaHeart } from "react-icons/fa";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { useNavigate } from "react-router-dom";
 import { useFavorite } from "./FavoriteContext";
 import data from "./properties.json";
 import "./Properties.css";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 const Properties = () => {
   const [properties, setProperties] = useState([]);
@@ -18,16 +17,32 @@ const Properties = () => {
   const [minRooms, setMinRooms] = useState(0);
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(10000000);
-  const [searchDate, setSearchDate] = useState("");
-  const [searchYear, setSearchYear] = useState("");
+  const [searchDate, setSearchDate] = useState(null);
   const [searchPostalCode, setSearchPostalCode] = useState("");
-
   const { dispatch, state } = useFavorite();
 
   useEffect(() => {
     // From json file
     setProperties(data.properties);
   }, []);
+
+  const monthToIndex = (month) => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    return months.indexOf(month);
+  };
 
   const filteredProperties = properties.filter((property) => {
     const matchesSearchTerm = property.location
@@ -36,27 +51,27 @@ const Properties = () => {
     const matchesMinRooms = property.bedrooms >= minRooms;
     const matchesPrice =
       property.price >= minPrice && property.price <= maxPrice;
-    const matchesDate = searchDate
-      ? property.added.month.toLowerCase().includes(searchDate.toLowerCase())
-      : true;
-    const matchesYear = searchYear
-      ? property.added.year
-          .toString()
-          .toLowerCase()
-          .includes(searchYear.toLowerCase())
-      : true;
     const matchesPostalCode = searchPostalCode
       ? property.postalCode
           .toLowerCase()
           .includes(searchPostalCode.toLowerCase())
       : true;
+      const matchesDate =
+      !searchDate ||
+      (property.added &&
+        new Date(
+          property.added.year,
+          monthToIndex(property.added.month),
+          property.added.day
+        ).getTime() === searchDate.getTime());
+
 
     return (
       matchesSearchTerm &&
       matchesMinRooms &&
       matchesPrice &&
-      matchesDate &&
-      matchesPostalCode
+      matchesPostalCode &&
+      matchesDate
     );
   });
 
@@ -114,12 +129,6 @@ const Properties = () => {
   const removeFromFavorites = (item) => {
     dispatch({ type: "REMOVE_FROM_FAVORITES", payload: item });
     console.log("removed from favorites: " + item.id);
-  };
-  const handleSearchDateChange = (e) => {
-    setSearchDate(e.target.value);
-  };
-  const handleSearchYearChange = (e) => {
-    setSearchYear(e.target.value);
   };
 
   const handleSearchPostalCodeChange = (e) => {
@@ -246,12 +255,14 @@ const Properties = () => {
                 <div className="me-2">
                   <DatePicker
                     selected={searchDate}
-                    onChange={handleSearchDateChange}
+                    onChange={(date) => setSearchDate(date)}
                     dateFormat="dd/MM/yyyy"
                     placeholderText="Search by date"
                     className="form-control"
                   />
                 </div>
+                
+                
                 <div className="input-group me-2">
                   <input
                     className="form-control"
