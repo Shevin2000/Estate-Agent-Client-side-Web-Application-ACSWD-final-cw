@@ -26,33 +26,6 @@ const Property = () => {
   }, [state.id]);
 
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
-  const CustomPrevArrow = (props) => (
-    <button {...props}>
-      <svg
-        className="svg-icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-      >
-        <path d="M17.815 19.157l-11.927-7.157 11.927-7.157-2.982 7.157 2.982 7.157zm4.185 4.843l-5-12 5-12-20 12 20 12z" />
-      </svg>
-    </button>
-  );
-
-  const CustomNextArrow = (props) => (
-    <button {...props}>
-      <svg
-        className="svg-icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-      >
-        <path d="M6.185 4.843l11.927 7.157-11.927 7.157 2.982-7.157-2.982-7.157zm-4.185-4.843l5 12-5 12 20-12-20-12z" />
-      </svg>
-    </button>
-  );
   const slickSettings = {
     dots: true,
     infinite: true,
@@ -97,13 +70,13 @@ const Property = () => {
                 maxWidth: "50%",
                 margin: "auto",
                 marginTop: "20px",
-                backgroundColor: "#20247b",
+                backgroundColor: "white",
                 borderRadius: "8px",
               }
             : {
                 margin: "auto",
                 marginTop: "20px",
-                backgroundColor: "#20247b",
+                backgroundColor: "white",
                 borderRadius: "10px",
               }
         }
@@ -228,6 +201,9 @@ const Property = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              // "no-referrer-when-downgrade", which means that the referrer 
+              // information is not sent in cross-origin requests unless the protocol 
+              // security level stays the same (e.g., from HTTPS to HTTPS).
             ></iframe>
           </div>
         </Tab>

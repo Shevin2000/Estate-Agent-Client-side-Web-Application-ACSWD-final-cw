@@ -28,7 +28,7 @@ const HomePage = () => {
   return (
     
     <div>
- <div className="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center mt-5 pt-2 pb-0 mb-0" style={{ backgroundColor: '#20247b', color: 'white' }}>
+ <div className="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center mt-5 pt-3 pb-0 mb-0" style={{ backgroundColor: '#20247b', color: 'white' }}>
       <div className="container">
         <h1 className="display-4" style={{color: 'white', fontSize:"2rem", fontWeight:"normal"}}>Welcome to SHEVIN HOMES !!!</h1>
         <p className="lead pb-3 mb-0" style={{color: 'white', fontSize:"1rem", fontWeight:"normal"}} >We are your trusted estate selling agents, committed to helping you find your dream home. Explore our wide range of properties and let us guide you through the journey of making your next home a reality.</p>

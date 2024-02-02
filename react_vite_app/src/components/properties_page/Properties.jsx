@@ -122,7 +122,7 @@ const Properties = () => {
   };
 
   const addToFavorites = (item) => {
-    dispatch({ type: "ADD_TO_FAVORITES", payload: item });
+    dispatch({ type: "ADD_TO_FAVORITES", payload: item });//dispatch method for ui change 
     console.log("added to favorites: " + item.id);
   };
 
